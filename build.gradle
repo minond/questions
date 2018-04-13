@@ -5,7 +5,9 @@ mainClassName = 'Main'
 
 run {}
 
-dependencies {}
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
 
 repositories {
   mavenCentral()

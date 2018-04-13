@@ -24,4 +24,8 @@ public class Answer {
   public boolean isCorrect() {
     return correct;
   }
+
+  public boolean isValid() {
+    return !text.equals("");
+  }
 }
