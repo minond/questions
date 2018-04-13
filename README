@@ -3,7 +3,8 @@ Flash Card / Q&A project proof of concept
 
 This is a proof of concept for what could be a project in the UtahRETC Java Programmer 1 Class. Summary: build a flash card/test prep/Q&A app that runs on the terminal on has a GUI.
 
-To build and test the project, run the following:
+To build, test, and run the project, run the following:
 
     gradle build
     gradle test
+    java -classpath build/classes/java/main/ urect.questions.Main

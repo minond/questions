@@ -10,6 +10,8 @@ public class Main {
     List<Question> questions = getQuestions();
     Scanner input = new Scanner(System.in);
 
+    System.out.print("UtahRECT Q&A Project");
+
     for (int i = 0, imax = questions.size(); i < imax; i++) {
       ask(questions.get(i), input, i);
     }
@@ -31,16 +33,30 @@ public class Main {
         new ArrayList<Answer>() {
           {
             for (String num : numbers) {
-              // NOTE Let it crash on formatting and out of bound errors
-              add(answers.get(Integer.parseInt(num) - 1));
+              try {
+                add(answers.get(Integer.parseInt(num.trim()) - 1));
+              } catch (NumberFormatException err) {
+                System.out.printf("Error converting '%s' into a valid response.\n", num);
+              } catch (ArrayIndexOutOfBoundsException err) {
+                System.out.printf("Answer #%s does not exists.\n", num);
+              }
             }
           }
         };
 
-    if (question.isCorrect(selected)) {
-      System.out.println("Correct!");
+    if (selected.size() > 0) {
+      System.out.println("Your answers were:");
+      for (Answer answer : selected) {
+        System.out.printf(" - %s\n", answer.getText());
+      }
     } else {
-      System.out.println("That is incorrect.");
+      System.out.println("You selected no answers.");
+    }
+
+    if (question.isCorrect(selected)) {
+      System.out.println("\nCorrect!");
+    } else {
+      System.out.println("\nIncorrect.");
     }
   }
 
