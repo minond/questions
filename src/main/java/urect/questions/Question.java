@@ -17,8 +17,6 @@ public abstract class Question {
 
   public abstract boolean isCorrect(List<Answer> selected);
 
-  public abstract boolean isValid();
-
   public UUID getUUID() {
     return uuid;
   }
@@ -41,5 +39,9 @@ public abstract class Question {
     }
 
     return correct;
+  }
+
+  public boolean isValid() {
+    return !text.equals("");
   }
 }

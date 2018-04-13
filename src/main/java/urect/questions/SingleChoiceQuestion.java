@@ -16,6 +16,6 @@ public class SingleChoiceQuestion extends Question {
 
   public boolean isValid() {
     List<Answer> correct = getCorrectAnswers();
-    return answers.size() > 1 && correct.size() == 1 && !text.equals("");
+    return super.isValid() && answers.size() > 1 && correct.size() == 1;
   }
 }

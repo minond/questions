@@ -26,6 +26,6 @@ public class MultipleChoiceQuestion extends Question {
   }
 
   public boolean isValid() {
-    return answers.size() > 1 && !text.equals("");
+    return super.isValid() && answers.size() > 1;
   }
 }
