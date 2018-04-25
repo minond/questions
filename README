@@ -7,4 +7,4 @@ To build, test, and run the project, run the following:
 
     gradle build
     gradle test
-    java -classpath build/classes/java/main/ urect.questions.Main
+    java -classpath build/classes/java/main/ urect.questions.cli.Main
