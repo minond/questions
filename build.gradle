@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'urect.questions.Main'
+mainClassName = 'urect.questions.cli.Main'
 
 run {
   standardInput = System.in
