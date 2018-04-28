@@ -55,5 +55,7 @@ public class CLI {
     } else {
       System.out.println("\nIncorrect.");
     }
+
+    System.out.println("Explination: " + question.getExplination());
   }
 }

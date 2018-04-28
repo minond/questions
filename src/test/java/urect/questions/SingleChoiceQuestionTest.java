@@ -11,13 +11,13 @@ import org.junit.Test;
 public class SingleChoiceQuestionTest {
   @Test
   public void testSingleChoiceQuestionWithNoTextIsInvalid() {
-    Question q = new SingleChoiceQuestion("", new ArrayList<Answer>());
+    Question q = new SingleChoiceQuestion("", "", new ArrayList<Answer>());
     assertFalse(q.isValid());
   }
 
   @Test
   public void testSingleChoiceQuestionWithNoAnswersIsInvalid() {
-    Question q = new SingleChoiceQuestion("q1", new ArrayList<Answer>());
+    Question q = new SingleChoiceQuestion("q1", "", new ArrayList<Answer>());
     assertFalse(q.isValid());
   }
 
@@ -30,7 +30,7 @@ public class SingleChoiceQuestionTest {
             new Answer("3", false),
             new Answer("4", false));
 
-    Question q = new SingleChoiceQuestion("q1", answers);
+    Question q = new SingleChoiceQuestion("q1", "", answers);
     assertFalse(q.isValid());
   }
 
@@ -43,7 +43,7 @@ public class SingleChoiceQuestionTest {
             new Answer("3", false),
             new Answer("4", true));
 
-    Question q = new SingleChoiceQuestion("q1", answers);
+    Question q = new SingleChoiceQuestion("q1", "", answers);
     assertFalse(q.isValid());
   }
 
@@ -56,7 +56,7 @@ public class SingleChoiceQuestionTest {
             new Answer("3", false),
             new Answer("4", false));
 
-    Question q = new SingleChoiceQuestion("q1", answers);
+    Question q = new SingleChoiceQuestion("q1", "", answers);
     assertTrue(q.isValid());
   }
 }

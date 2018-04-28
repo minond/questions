@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MultipleChoiceQuestion extends Question {
-  public MultipleChoiceQuestion(String text, List<Answer> answers) {
-    super(text, answers);
+  public MultipleChoiceQuestion(String text, String explination, List<Answer> answers) {
+    super(text, explination, answers);
   }
 
   public boolean isCorrect(List<Answer> selected) {

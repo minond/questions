@@ -3,8 +3,8 @@ package urect.questions;
 import java.util.List;
 
 public class SingleChoiceQuestion extends Question {
-  public SingleChoiceQuestion(String text, List<Answer> answers) {
-    super(text, answers);
+  public SingleChoiceQuestion(String text, String explination, List<Answer> answers) {
+    super(text, explination, answers);
   }
 
   public boolean isCorrect(List<Answer> selected) {
