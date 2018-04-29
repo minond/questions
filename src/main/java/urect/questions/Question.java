@@ -35,6 +35,10 @@ public abstract class Question {
     return answers;
   }
 
+  public boolean isAnswerable() {
+    return answers.size() != 0;
+  }
+
   public List<Answer> getCorrectAnswers() {
     List<Answer> correct = new ArrayList<Answer>();
 
